@@ -1,0 +1,25 @@
+{
+  "name": "typescript-starter",
+  "version": "1.0.0",
+  "description": "a typescript boilerplate for node projects using jest for tests",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "changelog": "standard-version",
+    "release": "yarn reset && yarn changelog",
+    "reset": "git clean -dfx && git reset --hard && yarn"
+  },
+  "keywords": [
+    "api",
+    "minerva",
+    "unitymedia"
+  ],
+  "author": "Mathias Karstädt",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "6",
+    "standard-version": "^4.3.0",
+    "typescript": "^2.7.1"
+  },
+  "dependencies": {}
+}
