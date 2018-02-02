@@ -25,7 +25,8 @@
       "es6"
     ],
     "types" : [
-      "node"
+      "node",
+      "jest"
     ],
     "baseUrl": ".", // required for "paths"
     "paths": {

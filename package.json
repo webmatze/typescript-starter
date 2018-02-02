@@ -6,8 +6,9 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "changelog": "standard-version",
-    "release": "yarn reset && yarn changelog",
-    "reset": "git clean -dfx && git reset --hard && yarn"
+    "release": "yarn reset && yarn test && yarn changelog",
+    "reset": "git clean -dfx && git reset --hard && yarn",
+    "test": "jest"
   },
   "keywords": [
     "api",
@@ -17,9 +18,26 @@
   "author": "Mathias Karstädt",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^22.1.1",
     "@types/node": "6",
+    "jest": "^22.1.4",
     "standard-version": "^4.3.0",
+    "ts-jest": "^22.0.2",
     "typescript": "^2.7.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
 }
